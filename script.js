@@ -39,7 +39,7 @@ botones.forEach((boton) => {
 });
 
 // Si una captura no existe todavía, se muestra el emoji de la tarjeta
-document.querySelectorAll(".thumb img").forEach((img) => {
+document.querySelectorAll(".thumb img, .foto img").forEach((img) => {
   const marcar = () => img.parentElement.classList.add("no-img");
   img.addEventListener("error", marcar);
   if (img.complete && img.naturalWidth === 0) marcar();
